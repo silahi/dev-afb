@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards Afriland</title>
+    <script>
+        // Gestion du routing pour GitHub Pages
+        (function() {
+            const path = window.location.pathname;
+            
+            // Extraire le chemin après le nom du repo
+            const segments = path.split('/').filter(s => s);
+            const page = segments[segments.length - 1] || 'global';
+            
+            // Router vers la bonne page
+            if (page === 'global' || page === '' || segments.length <= 1) {
+                window.location.replace(window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/global.html');
+            } else if (page === 'network') {
+                window.location.replace(window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/network.html');
+            } else if (page === 'agency') {
+                window.location.replace(window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/agency.html');
+            } else {
+                // Par défaut, rediriger vers global
+                const basePath = window.location.pathname.includes('/dev-afb/') 
+                    ? '/dev-afb/' 
+                    : window.location.pathname.split('/').slice(0, 2).join('/') + '/';
+                window.location.replace(window.location.origin + basePath + 'global.html');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <p style="text-align: center; font-family: Arial, sans-serif; margin-top: 50px;">
+        Redirection en cours...
+    </p>
+</body>
+</html>

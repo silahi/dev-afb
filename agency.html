@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard « Pilotage Agence »</title>
+    <script>
+        // Fonction pour naviguer entre les pages
+        function navigateTo(page) {
+            const basePath = window.location.pathname.includes('/dev-afb/') 
+                ? '/dev-afb/' 
+                : '/';
+            window.location.href = window.location.origin + basePath + page + '.html';
+        }
+    </script>
 </head>
 
 <body>
