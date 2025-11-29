@@ -20,6 +20,8 @@
                 window.location.replace(window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/network.html');
             } else if (page === 'agency') {
                 window.location.replace(window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/agency.html');
+            } else if (page === 'credit') {
+                window.location.replace(window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/credit.html');
             } else {
                 // Par défaut, rediriger vers global
                 const basePath = window.location.pathname.includes('/dev-afb/') 

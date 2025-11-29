@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard « Pilotage Réemplois »</title>
+    <script>
+        // Fonction pour naviguer entre les pages
+        function navigateTo(page) {
+            const basePath = window.location.pathname.includes('/dev-afb/') 
+                ? '/dev-afb/' 
+                : '/';
+            window.location.href = window.location.origin + basePath + page + '.html';
+        }
+    </script>
+</head>
+
+<body>
+    <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #333; max-width: 900px; padding: 10px;">
+
+        <!-- Titre Principal -->
+        <h1 style="color:#1F4E79; text-align:center;">Dashboard « Pilotage Réemplois »</h1>
+        <p>Ce dashboard est conçu pour fournir une vue d'ensemble détaillée de la performance des réemplois (crédits) 
+            sur différents axes stratégiques. Il centralise les informations clés dans un format visuel permettant 
+            un suivi rapide et décisionnel de l'activité de crédit.</p>
+
+        <!-- Section : Sélection et contexte -->
+        <div style="background-color:#EAF1F8; padding:10px; margin-top:15px; border-left: 5px solid #2E75B6;">
+            <h2 style="color:#2E75B6;">Sélection et contexte</h2>
+            <ul>
+                <li>Possibilité de sélectionner un niveau d'analyse : global, réseau ou agence.</li>
+                <li>Choix de la période : YTD ou mensuelle.</li>
+                <li>Sélection de l'année et du mois via des filtres.</li>
+                <li>Mention de la date et heure de mise à jour des données.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Indicateurs clés -->
+        <div style="background-color:#FFF4E5; padding:10px; margin-top:15px; border-left: 5px solid #F79646;">
+            <h2 style="color:#F79646;">Indicateurs clés (Key KPIs – Réemplois)</h2>
+            <ul>
+                <li>Une zone dédiée montre les principaux indicateurs de crédit :</li>
+                <ul>
+                    <li>Volume total des crédits octroyés.</li>
+                    <li>Pourcentage d'atteinte du budget.</li>
+                    <li>Évolution par rapport à l'année précédente (Y-1) avec flèche verte ou rouge.</li>
+                </ul>
+                <li>Organisation en blocs : crédits par segment, par durée, par type de garantie.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Analyse par Segment -->
+        <div style="background-color:#E6F4EA; padding:10px; margin-top:15px; border-left: 5px solid #00B050;">
+            <h2 style="color:#00B050;">Analyse par Segment Client</h2>
+            <ul>
+                <li>Répartition des réemplois par segment client (particuliers, PME, corporate, institutionnel).</li>
+                <li>Graphique en barres comparant les volumes par segment.</li>
+                <li>Évolution trimestrielle ou mensuelle par segment.</li>
+                <li>Comparaison avec les objectifs budgétaires par segment.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Qualité du Portefeuille -->
+        <div style="background-color:#FDE9E4; padding:10px; margin-top:15px; border-left: 5px solid #C00000;">
+            <h2 style="color:#C00000;">Qualité du Portefeuille</h2>
+            <ul>
+                <li>Taux de créances en souffrance (NPL ratio).</li>
+                <li>Évolution du taux de provisionnement.</li>
+                <li>Taux de recouvrement des créances.</li>
+                <li>Distribution par classe de risque.</li>
+                <li>Indicateurs de couverture des provisions.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Analyse par Durée -->
+        <div style="background-color:#F3E5F5; padding:10px; margin-top:15px; border-left: 5px solid #9C27B0;">
+            <h2 style="color:#9C27B0;">Analyse par Durée de Crédit</h2>
+            <ul>
+                <li>Répartition par maturité : court terme (< 1 an), moyen terme (1-5 ans), long terme (> 5 ans).</li>
+                <li>Graphique en camembert montrant la distribution des durées.</li>
+                <li>Analyse de la duration moyenne du portefeuille.</li>
+                <li>Comparaison avec les normes sectorielles.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Types de Garanties -->
+        <div style="background-color:#FFF2CC; padding:10px; margin-top:15px; border-left: 5px solid #FFC000;">
+            <h2 style="color:#FFC000;">Types de Garanties</h2>
+            <ul>
+                <li>Répartition des crédits par type de garantie :</li>
+                <ul>
+                    <li>Garanties hypothécaires</li>
+                    <li>Nantissement</li>
+                    <li>Caution</li>
+                    <li>Sans garantie</li>
+                </ul>
+                <li>Taux de couverture par type de garantie.</li>
+                <li>Analyse de la valeur des garanties vs encours.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Performance Commerciale -->
+        <div style="background-color:#E1F5FE; padding:10px; margin-top:15px; border-left: 5px solid #0288D1;">
+            <h2 style="color:#0288D1;">Performance Commerciale</h2>
+            <ul>
+                <li>Nombre de nouveaux dossiers de crédit.</li>
+                <li>Taux d'acceptation des demandes.</li>
+                <li>Délai moyen de traitement des dossiers.</li>
+                <li>Ticket moyen par segment.</li>
+                <li>Top 10 des agences/gestionnaires par volume de crédits octroyés.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Rentabilité -->
+        <div style="background-color:#F1F8E9; padding:10px; margin-top:15px; border-left: 5px solid #689F38;">
+            <h2 style="color:#689F38;">Rentabilité des Réemplois</h2>
+            <ul>
+                <li>Marge nette d'intérêt (NIM) sur les crédits.</li>
+                <li>Produit net bancaire généré.</li>
+                <li>Coût du risque.</li>
+                <li>ROE (Return on Equity) du portefeuille crédit.</li>
+                <li>Comparaison rentabilité par segment client.</li>
+            </ul>
+        </div>
+
+        <!-- Pied de page -->
+        <p style="text-align:center; font-size:0.9em; color:#666; margin-top:20px;">&copy; 2025 Pilotage Réemplois – Tous
+            droits réservés</p>
+
+    </div>
+
+</body>
+
+</html>
