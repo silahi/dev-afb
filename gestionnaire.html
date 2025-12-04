@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard « Pilotage Gestionnaire »</title>
+    <script>
+        // Fonction pour naviguer entre les pages
+        function navigateTo(page) {
+            const basePath = window.location.pathname.includes('/dev-afb/') 
+                ? '/dev-afb/' 
+                : '/';
+            window.location.href = window.location.origin + basePath + page + '.html';
+        }
+    </script>
+</head>
+
+<body>
+    <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #333; max-width: 900px; padding: 10px;">
+
+        <!-- Titre Principal -->
+        <h1 style="color:#e15759; text-align:center; font-size:3em;">Pilotage Gestionnaire</h1>
+        <p>Ce dashboard est conçu pour fournir une vue détaillée de la performance individuelle d'un gestionnaire. 
+            Il centralise les informations clés relatives à son activité commerciale, sa productivité et son portefeuille 
+            de clients, permettant un suivi précis et décisionnel au niveau personnel.</p>
+
+        <!-- Section : Sélection et contexte -->
+        <div style="background-color:#EAF1F8; padding:10px; margin-top:15px; border-left: 5px solid #2E75B6;">
+            <h2 style="color:#2E75B6;">Sélection et contexte</h2>
+            <ul>
+                <li>Sélection d'un gestionnaire spécifique (liste des gestionnaires de l'agence).</li>
+                <li>Choix de la période : YTD ou mensuelle.</li>
+                <li>Sélection de l'année et du mois via des filtres.</li>
+                <li>Mention de la date et heure de mise à jour des données.</li>
+                <li>Affichage du profil et du statut du gestionnaire (ancien/nouveau).</li>
+            </ul>
+        </div>
+
+        <!-- Section : Indicateurs clés -->
+        <div style="background-color:#FFF4E5; padding:10px; margin-top:15px; border-left: 5px solid #F79646;">
+            <h2 style="color:#F79646;">Indicateurs clés (Key KPIs – Activité)</h2>
+            <ul>
+                <li>Une zone dédiée affiche les principaux indicateurs d'activité :</li>
+                <ul>
+                    <li>Nombre de visites effectuées.</li>
+                    <li>Nombre de comptes ouverts.</li>
+                    <li>Nombre de crédits accordés.</li>
+                    <li>Montant total des crédits distribués.</li>
+                    <li>Évolution par rapport au mois précédent avec flèche verte ou rouge.</li>
+                </ul>
+                <li>Comparaison avec les objectifs fixés (% d'atteinte).</li>
+            </ul>
+        </div>
+
+        <!-- Section : Performance Commerciale -->
+        <div style="background-color:#E6F4EA; padding:10px; margin-top:15px; border-left: 5px solid #00B050;">
+            <h2 style="color:#00B050;">Performance Commerciale</h2>
+            <ul>
+                <li>Chiffre d'affaires généré (commissions, intérêts).</li>
+                <li>Comparaison avec le budget commercial personnel.</li>
+                <li>Évolution du chiffre d'affaires sur les 12 derniers mois (graphique en courbe).</li>
+                <li>Rang du gestionnaire parmi ses pairs (classement).</li>
+                <li>Moyenne de l'agence pour comparaison.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Portefeuille Clients -->
+        <div style="background-color:#FDE9E4; padding:10px; margin-top:15px; border-left: 5px solid #C00000;">
+            <h2 style="color:#C00000;">Portefeuille Clients</h2>
+            <ul>
+                <li>Nombre total de clients gérés.</li>
+                <li>Répartition par segment client (particuliers, PME, corporate).</li>
+                <li>Montant moyen des comptes (dépôts, crédits).</li>
+                <li>Taux de fidélité / rétention des clients.</li>
+                <li>Nombre de clients actifs (mouvement le mois).</li>
+                <li>Graphique en barres montrant l'évolution du portefeuille.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Qualité du Portefeuille Crédit -->
+        <div style="background-color:#F1F8E9; padding:10px; margin-top:15px; border-left: 5px solid #689F38;">
+            <h2 style="color:#689F38;">Qualité du Portefeuille Crédit</h2>
+            <ul>
+                <li>Encours total des crédits accordés.</li>
+                <li>Taux de créances en souffrance (NPL) sur le portefeuille du gestionnaire.</li>
+                <li>Nombre de dossiers en arrérages.</li>
+                <li>Montant des provisions constitutées.</li>
+                <li>Taux de recouvrement des impayés.</li>
+                <li>Comparaison avec les standards de l'agence.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Collecte et Ressources -->
+        <div style="background-color:#FFF2CC; padding:10px; margin-top:15px; border-left: 5px solid #FFC000;">
+            <h2 style="color:#FFC000;">Collecte et Ressources</h2>
+            <ul>
+                <li>Volume total des dépôts collectés.</li>
+                <li>Répartition par type de produit (épargne, compte courant, produits spécialisés).</li>
+                <li>Coût moyen de la ressource.</li>
+                <li>Taux de croissance des dépôts.</li>
+                <li>Graphique en camembert montrant la répartition des ressources.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Indicateurs Comportementaux -->
+        <div style="background-color:#E9D5FF; padding:10px; margin-top:15px; border-left: 5px solid #7B2CBF;">
+            <h2 style="color:#7B2CBF;">Indicateurs Comportementaux</h2>
+            <ul>
+                <li>Taux de présence / assiduité.</li>
+                <li>Nombre de dossiers en pipeline (prospects, en cours de traitement).</li>
+                <li>Taux de conversion prospect-client.</li>
+                <li>Temps moyen de traitement d'un dossier de crédit.</li>
+                <li>Score de qualité des dossiers traités.</li>
+            </ul>
+        </div>
+
+        <!-- Pied de page -->
+        <p style="text-align:center; font-size:0.9em; color:#666; margin-top:20px;">&copy; 2025 Pilotage Gestionnaire – Tous
+            droits réservés</p>
+
+    </div>
+
+</body>
+
+</html>
