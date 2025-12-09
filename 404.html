@@ -24,6 +24,8 @@
                 window.location.replace(window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/credit.html');
             } else if (page === 'gestionnaire') {
                 window.location.replace(window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/gestionnaire.html');
+            } else if (page === 'commercial') {
+                window.location.replace(window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/commercial.html');
             } else {
                 // Par défaut, rediriger vers global
                 const basePath = window.location.pathname.includes('/dev-afb/') 

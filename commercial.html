@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard « Pilotage Commercial »</title>
+    <script>
+        // Fonction pour naviguer entre les pages
+        function navigateTo(page) {
+            const basePath = window.location.pathname.includes('/dev-afb/') 
+                ? '/dev-afb/' 
+                : '/';
+            window.location.href = window.location.origin + basePath + page + '.html';
+        }
+    </script>
+</head>
+
+<body>
+    <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #333; max-width: 900px; padding: 10px;">
+
+        <!-- Titre Principal -->
+        <h1 style="color:#e15759; text-align:center; font-size:3em;">Pilotage Commercial</h1>
+        <p>Ce dashboard est conçu pour fournir une vue d'ensemble de la performance commerciale globale. 
+            Il centralise les indicateurs clés de vente, de rentabilité et de développement commercial, 
+            permettant un suivi stratégique et opérationnel de l'activité commerciale.</p>
+
+        <!-- Section : Sélection et contexte -->
+        <div style="background-color:#EAF1F8; padding:10px; margin-top:15px; border-left: 5px solid #2E75B6;">
+            <h2 style="color:#2E75B6;">Sélection et contexte</h2>
+            <ul>
+                <li>Sélection du niveau d'analyse : global, réseau ou agence.</li>
+                <li>Choix de la période : YTD ou mensuelle.</li>
+                <li>Sélection de l'année et du mois via des filtres.</li>
+                <li>Mention de la date et heure de mise à jour des données.</li>
+                <li>Comparaison avec la période antérieure.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Indicateurs clés de vente -->
+        <div style="background-color:#FFF4E5; padding:10px; margin-top:15px; border-left: 5px solid #F79646;">
+            <h2 style="color:#F79646;">Indicateurs clés (Key KPIs – Ventes)</h2>
+            <ul>
+                <li>Une zone dédiée affiche les principaux indicateurs commerciaux :</li>
+                <ul>
+                    <li>Chiffre d'affaires total généré.</li>
+                    <li>Pourcentage d'atteinte du budget commercial.</li>
+                    <li>Nombre de nouveaux clients acquis.</li>
+                    <li>Montant moyen par transaction.</li>
+                    <li>Évolution par rapport à la période précédente avec flèche verte ou rouge.</li>
+                </ul>
+                <li>Comparaison avec les objectifs fixés.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Performance par Produit -->
+        <div style="background-color:#E6F4EA; padding:10px; margin-top:15px; border-left: 5px solid #00B050;">
+            <h2 style="color:#00B050;">Performance par Produit</h2>
+            <ul>
+                <li>Répartition du chiffre d'affaires par catégorie de produit.</li>
+                <li>Volume de ventes par produit (crédits, dépôts, services).</li>
+                <li>Contribution de chaque produit au résultat total.</li>
+                <li>Évolution mensuelle des ventes par produit (graphique en barres).</li>
+                <li>Produits en croissance vs. produits en déclin.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Analyse par Segment Client -->
+        <div style="background-color:#FDE9E4; padding:10px; margin-top:15px; border-left: 5px solid #C00000;">
+            <h2 style="color:#C00000;">Analyse par Segment Client</h2>
+            <ul>
+                <li>Répartition du chiffre d'affaires par segment (particuliers, PME, corporate, institutionnel).</li>
+                <li>Nombre de clients par segment.</li>
+                <li>Valeur moyenne par segment.</li>
+                <li>Croissance comparée par segment.</li>
+                <li>Graphique en camembert montrant la contribution de chaque segment.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Rentabilité Commerciale -->
+        <div style="background-color:#F1F8E9; padding:10px; margin-top:15px; border-left: 5px solid #689F38;">
+            <h2 style="color:#689F38;">Rentabilité Commerciale</h2>
+            <ul>
+                <li>Marge commerciale brute et nette.</li>
+                <li>Ratio coût d'acquisition client (CAC).</li>
+                <li>Lifetime value (LTV) des clients.</li>
+                <li>ROI (Return on Investment) des actions commerciales.</li>
+                <li>Profitabilité par canal de distribution.</li>
+                <li>Analyse de la rentabilité vs. volume.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Pipeline et Prospection -->
+        <div style="background-color:#FFF2CC; padding:10px; margin-top:15px; border-left: 5px solid #FFC000;">
+            <h2 style="color:#FFC000;">Pipeline et Prospection</h2>
+            <ul>
+                <li>Nombre de prospects en pipeline par étape de vente.</li>
+                <li>Valeur totale du pipeline en cours.</li>
+                <li>Taux de conversion à chaque étape.</li>
+                <li>Temps moyen de cycle de vente.</li>
+                <li>Forecast des ventes à court terme.</li>
+                <li>Graphique en entonnoir (funnel) du pipeline.</li>
+            </ul>
+        </div>
+
+        <!-- Section : Équipe Commerciale -->
+        <div style="background-color:#E9D5FF; padding:10px; margin-top:15px; border-left: 5px solid #7B2CBF;">
+            <h2 style="color:#7B2CBF;">Performance de l'Équipe Commerciale</h2>
+            <ul>
+                <li>Classement des meilleurs commerciaux par chiffre d'affaires.</li>
+                <li>Moyenne des ventes par commercial vs. benchmark.</li>
+                <li>Indicateurs individuels : nombre de dossiers, taux de conversion.</li>
+                <li>Taux d'atteinte des objectifs par commercial.</li>
+                <li>Identification des besoins de formation ou d'accompagnement.</li>
+            </ul>
+        </div>
+
+        <!-- Pied de page -->
+        <p style="text-align:center; font-size:0.9em; color:#666; margin-top:20px;">&copy; 2025 Pilotage Commercial – Tous
+            droits réservés</p>
+
+    </div>
+
+</body>
+
+</html>
